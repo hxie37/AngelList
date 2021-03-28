@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Allocation Proration Tool</title>
+</head>
+<body onload="main">
+    <div class = "div_input">
+        <div class = "my_title">Inputs</div>
+        <div class = "div_allocation">
+            <form method="post">
+                <div class = "my_text">Total Available Allocation</div>
+                <input type="number" step = "any" name="allocation_amount" placeholder="Allocation"><br>
+                <div class = "my_text">Investor Breakdown</div>
+                <input type="text" name="name1" placeholder="Name">
+                <input type="number" step = "any" name="req1" placeholder="Requested Amount">
+                <input type="number" step = "any" name="avg1" placeholder="Average Amount">
+                <br>
+                <input type="text" name="name2" placeholder="Name">
+                <input type="number" step = "any" name="req2" placeholder="Requested Amount">
+                <input type="number" step = "any" name="avg2" placeholder="Average Amount">
+                <br>
+                <input type="text" name="name3" placeholder="Name">
+                <input type="number" step = "any" name="req3" placeholder="Requested Amount">
+                <input type="number" step = "any" name="avg3" placeholder="Average Amount">
+                <br>
+                <input class="my_button" type="submit" name="submit" value="Prorate">
+            </form>
+        </div>
+    </div>
+    <div class = "div_result">
+        <div class = "my_title"> Result</div>
+        <div class = "div_result2">
+            {% if res|length > 0 %}
+                {% for key in res %}
+                <div class = "my_text">{{ key }} - ${{ res[key] }}</div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</body>
+
+<style>
+p.comic{font-family:"Comic Sans MS", cursive, sans-serif;}
+
+.my_button {
+    border-radius: 5px;
+    background: rgb(98, 89 ,236 );
+    color: white;
+    text-align:center;
+    padding: 20px;
+    width: 140px;
+    height: 60px;
+    position:relative;
+    font-family:    Arial, Helvetica, sans-serif;
+    font-size:      20px;
+}
+
+.my_title {
+    font-family:    Arial, Helvetica, sans-serif;
+    font-size:      30px;
+    font-weight: bold;
+    margin: 20px;
+
+}
+.my_text{
+    font-family:    Arial, Helvetica, sans-serif;
+    font-size:      25px;
+    margin: 10px;
+}
+
+.div_result {
+    width: 40%;
+    height: 60%;
+    left: 60%;
+    position: absolute;
+}
+.div_result2 {
+    background-color: white;
+    width: 80%;
+    height: 90%;
+    border: 2px solid;
+    border-color: rgb(224,230,236);
+    margin: 20px;
+    padding: 25px;
+    position: absolute;
+}
+
+.div_input {
+    width: 60%;
+    height: 60%;
+    position: absolute;
+}
+
+.div_allocation {
+    background-color: rgb(224,230,236);
+    width: 80%;
+    height: 90%;
+    border: 2px solid;
+    border-color: rgb(161,172,185);
+    margin: 20px;
+    padding: 25px;
+    position: absolute;
+}
+
+input {
+    border-radius: 2px;
+    border-color: rgb(186,196,206);
+    background: white;
+    width: 200px;
+    height: 50px;
+    margin: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+</style>
+</html>
+
+<script>
+if ( window.history.replaceState ) {
+  window.history.replaceState( null, null, window.location.href );
+}
+</script>
