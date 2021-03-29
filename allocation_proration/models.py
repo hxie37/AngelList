@@ -1,4 +1,8 @@
-
+"""
+    :author: Hanjie Xie
+    :date: 3/38/2021
+    :description: This project is a take home assignment from AngelList
+"""
 
 
 class Investor:
@@ -8,6 +12,10 @@ class Investor:
         self.average_amount = average_amount
 
     def get_dict(self) -> dict:
+        """
+        For log purpose
+        :return:
+        """
         inv_dict = {}
         inv_dict['name'] = self.name
         inv_dict['requested_amount'] = self.requested_amount
@@ -27,7 +35,19 @@ class Proration:
         for investor in investors_dic:
             self.investors[investor.name] = investor
 
+    def add_investor(self, investor):
+        """
+        For future use if the index.html allow multiple clients access at the sametime
+        :param investor:
+        :return:
+        """
+        self.investors[investor.name] = investor
+
     def get_list(self) -> list:
+        """
+        For log purpose
+        :return:
+        """
         inv_list = []
         for name in self.investors:
             inv_list.append(self.investors[name].get_dict())

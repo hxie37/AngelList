@@ -12,3 +12,17 @@ this could potentially happen less often?
 
 Response
 ~~~~~~~~
+
+As the algorithm designer, we are responsible to estimate the issue talked about above that happens somehow.
+The key idea is to reach out to the clients before they reach out to us. The server should generate a warning
+when the sum of the requested value exceeds the allocation amount. In this scenario, we should acknowledge to
+the investors that we have a potential oversubscribed issue, and they may be allocated a lower amount than their requests.
+
+The communication after clients reach out to us is not effective. Like I said in the previous question, the goal is to
+maintain the fiduciary and trust. We will state that we acknowledge the frustration from the clients, and explain the
+real reason that they are allocated lower than their request.
+
+I believe the current proration basis is able to guarantee the fairness to everyone. I would suggest to consider the requeted
+amount and the average amount together. For example, adding ratios before the requested amount and average amount the calculate
+the final weight. Also, we can setup a threshold to minimize the small investment amount, and expend the allocatoin space
+for the large investors.

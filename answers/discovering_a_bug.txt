@@ -8,4 +8,25 @@ other one happened two weeks ago. Please describe, in detail, how would you go a
 issue and how would you communicate this to the affected customers.
 
 Response
-~~~~~~~~
+~~~~~~~
+For the mistake happened 2 years ago:
+Based on the current algorithm, the incorrect history allocations would lead to consequent incorrectness
+in the following allocations. So the first thing to do is to understand the real quantitative impact on
+the investors. Since investors' requested value and allocation amount for each deal are all random variables,
+it is difficult to generate a statistical model to estimate the difference. I would suggest recalculating
+the true allocations and averages, then comparing the true and false data set. Difference and standard deviation
+would help us classify if the investors are highly impacted by our mistake or barely impacted. Meanwhile, the
+correct parameters used in the algorithm should be applied in the future allocations.
+
+For the mistake happened 2 weeks ago:
+I am not completely understand the timeliness of the deal, so I am assuming 2 weeks are in still in the adjustable period.
+In this case, I would suggest to immediately replace the incorrect allocation with true data.
+
+The next step is to acknowledge all investors immediately about the wrong allocation and adjustment on their
+correct weight for the future allocation. For those important clients, it is better to set up a client meeting
+through a phone screen and admit the mistake we made. Make sure the investors believe we are trustable and not
+hiding anything from them. The fiduciary is the key point. Also, depending on the classification, we will provide
+distinct alternative solutions. For example, highly impacted investors would be allowed to increase the weight
+in the next few deals to match their loss before.
+
+
